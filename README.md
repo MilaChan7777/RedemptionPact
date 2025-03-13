@@ -53,7 +53,7 @@ Con elementos **phygital**, integra una experiencia inmersiva tanto en el entorn
 ## 🚀 Cómo Iniciar el Proyecto
 ### **Clonar el Repositorio**
 ```sh
-git clone https://github.com/Lina17Landys/Redemption-Pact.git
+git clone https://github.com/MilaChan7777/RedemptionPact.git
 cd Redemption-Pact
 ```
 

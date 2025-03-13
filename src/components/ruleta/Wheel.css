@@ -1,0 +1,128 @@
+body {
+  background-image: url('/public/img/fondo.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.wheel-item {
+  text-align: center;
+  padding: 13px;
+  color: white;
+  background: #4D080D;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+}
+
+.selected {
+  background: rgb(248, 133, 133);
+  color: #000;
+  font-weight: bold;
+  border-radius: 10px;
+  transform: scale(1.2);
+}
+
+.wheel-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Mantiene la ruleta en su lugar */
+.wheel {
+  position: relative;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 340px;
+  width: 380px;
+  padding: 10px;
+  background-image: url('/public/img/ruletabg.png');
+  border-radius: 10px;
+}
+
+/* Ubicar el botón en la parte inferior pero sobre la ruleta */
+.spin-button {
+  position: absolute;
+  bottom: -30px;  /* Lo coloca por encima del borde de la ruleta */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 60px;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Asegura que esté sobre la ruleta */
+}
+
+/* Ajustes para el botón de imagen */
+.button-play {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* Efectos de hover y active */
+.spin-button:hover .button-play {
+  transform: scale(1.1);
+}
+
+.spin-button:active .button-play {
+  transform: scale(1.2);
+}
+
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: rgba(231, 64, 64, 0.822);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: justify;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    color: white;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 10px;
+  }
+  
+  .modal-content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .modal-content button {
+    background: #A00E10;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto; /* Centra el botón */
+  }
+  
+  .modal-content button:hover {
+    background: #5e0506;
+  }

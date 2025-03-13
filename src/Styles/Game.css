@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+FELL+English&display=swap');
+
+.game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ajusta el tamaño a la pantalla completa */
+}
+
+/* LOGO */
+.logo-img {
+    position: relative;
+    width: 400px;
+    height: auto;
+    bottom: -80px;
+    margin-bottom: 0px; /* Espaciado con la ruleta */
+}
+
+/* BOTÓN DE REGRESO */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+}
+
+.final-button {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+   
+.final-button:hover {
+    transform: translateX(-50%) scale(1.1); /* Mantiene la posición mientras crece */
+}
+  
+.final-button:active {
+    transform: translateX(-50%) scale(1.2);
+}
+
+  
+.final-button img {
+  position: relative;
+  z-index: 1;
+  top: -10px;
+  width: 150px;
+  display: block;       
+}

@@ -1,0 +1,138 @@
+.final-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.title-cielo, .title-limbo, .title-hell {
+    margin-top: -10px;
+    font-size: 2.3rem;
+}
+
+.final-title {
+    font-size: 1.5rem;
+    font-family: 'IM FELL English', serif;;
+    font-weight: bold;
+    color: white;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.results-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.heaven, .limbo, .hell {
+    width: 30%;
+    height: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    text-align: center;
+    background-image: url(/public/img/ruletabg.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-y: auto;  /* Habilita el scroll */
+    overflow-x: hidden;
+    scrollbar-width: thin;  /* Para Firefox */
+    scrollbar-color: #6c6c6c46 transparent;  /* Color del scrollbar en Firefox */
+}
+
+/* Scrollbar para navegadores basados en WebKit (Chrome, Edge, Safari) */
+.heaven::-webkit-scrollbar,
+.limbo::-webkit-scrollbar,
+.hell::-webkit-scrollbar {
+    width: 4px; 
+}
+
+.heaven::-webkit-scrollbar-track,
+.limbo::-webkit-scrollbar-track,
+.hell::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.heaven::-webkit-scrollbar-thumb,
+.limbo::-webkit-scrollbar-thumb,
+.hell::-webkit-scrollbar-thumb {
+    background: #6c6c6c;
+    border-radius: 10px; 
+}
+
+.heaven::-webkit-scrollbar-thumb:hover,
+.limbo::-webkit-scrollbar-thumb:hover,
+.hell::-webkit-scrollbar-thumb:hover {
+    background: #888888; 
+}
+
+.heaven::-webkit-scrollbar-button,
+.limbo::-webkit-scrollbar-button,
+.hell::-webkit-scrollbar-button {
+    display: none;
+}
+
+/*.heaven { background-color: #74b9ff; }  
+.limbo { background-color: #636e72; }  
+.hell { background-color: #d63031; }  */
+
+button {
+    background: none; 
+    border: none; 
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.button-image {
+    width: 200px; 
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover .button-image {
+    transform: scale(1.1); 
+}
+
+.logo-2 {
+    width: 420px;  
+    height: auto; 
+}
+.player-final {
+    display: flex;
+    align-items: center;  /* Alinea verticalmente */
+    width: 100%;
+    padding: 2px;
+    gap: 10px; /* Espacio entre avatar y texto */
+}
+
+/* Ajustes para la imagen del avatar */
+.player-avatar {
+    width: 40px; /* Ajusta el tamaño según necesites */
+    height: 40px;
+    border-radius: 50%; /* Lo hace circular */
+}
+
+/* Contenedor del texto */
+.player-text {
+    display: flex;
+    flex-direction: column; /* Asegura que el nombre y mensaje estén en columna */
+    text-align: left; /* Alinea el texto a la izquierda */
+}

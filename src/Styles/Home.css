@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+FELL+English&display=swap');
+
+/* ESTILOS GENERALES */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: url("../assets/background.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* DIFERENTES BACKGROUNDS PARA CADA PÁGINA */
+.home-page, .instructions-page {
+    width: 100vw;
+    height: 100vh;
+    background: url("../assets/background.png") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MARCO FIJO */
+.marcouno {
+    position: fixed;
+    top: 2vh;
+    left: 2vw;
+    width: 96vw;
+    height: 96vh;
+    background: url("../assets/marcouno.png") no-repeat center;
+    background-size: 100% 100%;
+    pointer-events: none;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1300px;
+    min-width: 320px;
+    height: 100%;
+}
+
+/* SECCIÓN IZQUIERDA */
+.left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    gap: 8px;
+}
+
+/* LOGO MÁS GRANDE */
+.logo {
+    width: 450px; 
+    margin-bottom: 25px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 15px rgba(235, 58, 58, 0.8));
+}
+
+/* BOTÓN MÁS PEQUEÑO QUE EL LOGO */
+.botonstart {
+    width: 180px;
+    max-width: 80%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.botonstart:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 15px rgba(235, 58, 58, 0.8));
+}
+
+.botonstart:active {
+    transform: scale(0.95);
+}
+
+/* BOTÓN DE INSTRUCCIONES */
+.instructions-button {
+    font-family: 'IM FELL English', serif;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.instructions-button:hover {
+    color: rgba(235, 58, 58, 0.8);
+    transform: scale(1.1);
+}
+
+.instructions-button:active {
+    transform: scale(0.95);
+}
+
+/* SECCIÓN DERECHA */
+.right-content {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IMAGEN PRINCIPAL CON ANIMACIONES */
+.homeimage {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    animation: float 4s ease-in-out infinite, fadeIn 1s ease-in-out;
+}
+
+.homeimage:hover {
+    transform: scale(1.05) rotate(2deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-content, .right-content {
+        width: 100%;
+    }
+
+    .logo {
+        width: 350px; 
+    }
+    
+    .botonstart {
+        width: 140px; 
+    }
+
+    .homeimage {
+        max-width: 80%;
+    }
+}
+
+/* ANIMACIONES */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}

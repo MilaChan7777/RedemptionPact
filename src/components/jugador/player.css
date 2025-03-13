@@ -1,0 +1,103 @@
+.player-stats {
+  background: none; 
+  color: white;
+  display: flex;
+  margin-top: -70px;
+  flex-direction: column;
+  align-items: center; /* Centra el título "Jugadores" */
+  gap: 10px;
+  max-height: 300px; /* Altura máxima para la lista */
+  overflow-y: auto; /* Scroll solo en esta parte */
+  padding: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #312c2c7c transparent;
+}
+
+.title-player{
+  color: white;
+  position: relative;
+  bottom: 20px;
+  margin-bottom: -10px;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribuye los elementos */
+  background-color: rgba(153, 27, 27, 0.479);
+  padding: 12px;
+  top: 0px;
+  border-radius: 15px;
+  width: 220px;
+  height: 65px;
+  gap: 8px;
+}
+
+.player-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #515076;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1; /* Permite ajuste automático */
+}
+
+.player-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: -20px;
+}
+
+.lives-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.lives-control span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  text-align: center;
+  margin-bottom: -40px;
+}
+
+.lives-control button {
+  background-color: #a72828;
+  border: none;
+  color: white;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.lives-control button:first-child {
+  background-color: #dc3545;
+}
+
+.lives-control button:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}

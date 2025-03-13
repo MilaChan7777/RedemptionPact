@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+FELL+English&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Estructura principal */
+.players-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../assets/playersbackground.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 10px;
+}
+
+/* Flecha de regreso */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Título "Ingresar jugadores" */
+.title {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+/* Marco de jugadores */
+.frame-players {
+    position: relative;
+    width: 90%;
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px; 
+}
+
+.frame-image {
+    width: 100%;
+}
+
+/* Input + Botón de agregar */
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 90%;
+    max-width: 300px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    text-align: center;
+    font-family: 'IM FELL English', serif;
+}
+
+.add-button {
+    position: relative;
+    top: -20px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;  
+    font-family: 'IM FELL English', bold;
+}
+
+.add-button:hover {
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+}
+
+.start-button {
+    font-family: 'IM FELL English', serif;
+    background: darkred;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 12px 24px;
+    margin-top: -10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: static; /* Quitar position relative */
+    cursor: pointer;   
+    transition: transform 0.2s ease-in-out;  
+}
+
+.start-button:hover {
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.remove-button:hover {
+    transform: scale(1.2);
+    color: red;
+}
+
+.players-list {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-height: 320px;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #6c6c6c transparent;
+}
+
+
+.players-list::-webkit-scrollbar {
+    width: 4px; 
+}
+
+.players-list::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.players-list::-webkit-scrollbar-thumb {
+    background: #6c6c6c;
+    border-radius: 10px; 
+}
+
+.players-list::-webkit-scrollbar-thumb:hover {
+    background: #888888; 
+}
+
+.players-list::-webkit-scrollbar-button {
+    display: none;
+}
+
+.player-item {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinea los elementos verticalmente */
+    justify-content: space-between; /* Espacia el avatar, el nombre y la "X" */
+    width: 100%;
+    max-width: 220px;
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.avatar-container {
+    width: 40px;
+    height: 40px;
+    margin-top: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #515076;
+}
+
+/* Imagen del avatar */
+.player-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+    transform: scale(1); 
+}
+
+.player-name {
+    font-size: 14px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Ajusta el botón "X" */
+.player-remove {
+    cursor: pointer;
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.avatar-options {
+    position: absolute; /* Cambiar de fixed a absolute */
+    background-color: black;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    width: 140px;
+    max-height: 140px;
+    overflow-y: auto;
+
+}
+
+
+.avatar-options::-webkit-scrollbar {
+    width: 3px;
+    background: transparent;
+}
+
+.avatar-options::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.avatar-options:hover::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.avatar-option-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s ease-in-out;
+}
+
+.avatar-option-container:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.avatar-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar-name {
+    color: white;
+    font-size: 12px;
+}
+
+/* Botón de cerrar la lista de avatares*/
+.close-avatar-options {
+    position: absolute; /* Cambiado de sticky a absolute */
+    top: -30px; /* Asegura que esté arriba */
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    z-index: 10000;
+}
+
+
+.playersone-icon {
+    position: absolute;
+    z-index: 1;
+    bottom: 40px; 
+    right: -5px;
+    width: 70px; 
+    pointer-events: none; 
+}

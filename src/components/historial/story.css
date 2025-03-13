@@ -1,0 +1,39 @@
+.game-history {
+    width: 100%; 
+    max-width: 200px; 
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #991b1bc4; 
+    border-left: 5px solid #ffffff; 
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left; 
+    margin-left: -80px;
+    margin-top: 20px;
+  }
+  
+  .game-history h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #f6f6f6;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+  }
+  
+  .game-history ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+  
+  .game-history li {
+    font-size: 16px;
+    padding: 5px 0;
+    color: #ffffff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .game-history li:last-child {
+    border-bottom: none;
+  }
+  
